@@ -39,6 +39,10 @@ class App extends React.Component {
     })
   };
 
+  mixTiles = () => {
+    console.log("MIX TILES");
+  }
+
   render() {
     return (
       <Wrapper>
