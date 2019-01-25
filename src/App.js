@@ -15,12 +15,12 @@ class App extends React.Component {
 
   tileCardClick = clickedId => {
 
-    
     const updatedTiles = tiles;
     let tileIdx = tiles.findIndex(tile => tile.id === clickedId);
     
     if ( this.state.tiles[tileIdx].clicked === true ) {
       console.log("WRONG.  Reset Game");
+      resetGame();
     } else {
       console.log("Right Answer");
       updatedTiles[tileIdx].clicked=true;
@@ -29,9 +29,15 @@ class App extends React.Component {
         tiles: updatedTiles
      })
     }
-
   };
 
+  resetGame = () => {
+    console.log("RESETTING GAME");
+    mixTiles();
+    this.setState({
+      score: 0
+    })
+  };
 
   render() {
     return (
