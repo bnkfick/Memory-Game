@@ -32,7 +32,7 @@ class App extends React.Component {
 
   resetGame = () => {
     console.log("RESETTING GAME");
-    this.mixTiles();
+    this.mixTiles(this.state.tiles);
     this.setState({
       score: 0
     })
