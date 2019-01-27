@@ -25,7 +25,7 @@ class App extends React.Component {
 
     if (this.state.tiles[tileIdx].clicked === true) {
 
-      this.setState({msg: "You've clicked that Tile already."});
+      this.setState({msg: "You've clicked that Tile already. Try Again."});
       this.resetGame();
     } else {
       this.setState({msg: "+1 You haven't clicked that Tile before!"});

@@ -20,3 +20,17 @@
     white-space: nowrap
 }
 
+.msgbar > div {
+    width: 33%;
+}
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+
+

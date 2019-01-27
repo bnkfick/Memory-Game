@@ -4,9 +4,9 @@ import "./style.css";
 function MsgBar(props) {
   return (
     <div className="msgbar">
-    <div>Clicky Game</div>
-    <div>{props.msg}</div>
-      <div>
+      <div>Clicky Game</div>
+      <div className="center">{props.msg}</div>
+      <div className="right">
           SCORE: {props.score} | TOP SCORE: {props.highScore} 
       </div>
     </div>
