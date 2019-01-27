@@ -25,10 +25,10 @@ class App extends React.Component {
 
     if (this.state.tiles[tileIdx].clicked === true) {
 
-      this.setState({msg: "GAME OVER!  You've clicked that Tile already.  Try Again."});
+      this.setState({msg: "You've clicked that Tile already."});
       this.resetGame();
     } else {
-      this.setState({msg: "RIGHT!  You haven't clicked that Tile before."});
+      this.setState({msg: "+1 You haven't clicked that Tile before!"});
       updatedTiles[tileIdx].clicked = true;
       this.setState({
         score: this.state.score + 1,
@@ -80,13 +80,13 @@ class App extends React.Component {
   render() {
     return (
       <>
-      <MsgBar score={this.state.score} msg={this.state.msg}></MsgBar>
-      <header id="showcase" class="grid">
+      <MsgBar score={this.state.score} highScore={this.state.highScore} msg={this.state.msg}></MsgBar>
+      <header id="showcase">
         <div class="bg-image"></div>
         <div class="content-wrap">
             <h1>Welcome to the Clicky Game</h1>
-            <p>Test your memory.</p> 
-            <p>Don't click the same image more than once or your score will reset.</p>
+            <p>TEST YOUR MEMORY.</p> 
+            <p>Don't click the same image more than once &mdash; or your score will reset.</p>
 
         </div>
     </header>

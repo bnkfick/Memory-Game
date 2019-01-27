@@ -3,12 +3,8 @@ import "./style.css";
 
 function Wrapper(props) {
   return (
-    <div className="main">
-<div></div>
     <div className="tile-container">
     {props.children}
-    </div>
-<div></div>
     </div>
   );
 }

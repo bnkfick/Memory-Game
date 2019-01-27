@@ -15,7 +15,7 @@
 
 #showcase .bg-image {
   position: absolute;
-  background-color:red; 
+  background-color:red; /* url () I liked it better without the bg image */
   width: 100%;
   height: 250px;
   z-index: -1;
@@ -28,5 +28,4 @@
     font-family: 'Nunito', sans-serif;
     letter-spacing: 2px;
     font-weight: 900;
-   
 }

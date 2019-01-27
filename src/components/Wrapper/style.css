@@ -18,3 +18,13 @@
   margin-top: 10px;
 }
 
+/* Small Screens */
+@media (min-width: 1100px) {
+  .tile-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 1100px
+  }
+}
+
+
