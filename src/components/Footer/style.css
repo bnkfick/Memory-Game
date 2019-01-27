@@ -2,14 +2,34 @@
 .footer {
     background-color: #2690d4;
     color: #fff;
-    height: 100px;
+    height: 200px;
     width: 100%;
     padding: 2rem 1.2rem .5rem 1.2rem;
-    margin-top: 4em;
+    margin-top: 2em;
     text-align: center;
     -webkit-box-shadow: 14px 0 28px rgba(0, 0, 0, .25), 10px 0 10px rgba(0, 0, 0, .22);
     box-shadow: 14px 0 28px rgba(0, 0, 0, .25), 10px 0 10px rgba(0, 0, 0, .22);
     font-family: 'Nunito', sans-serif;
     font-size: calc(10px + 10 * (100vw - 320px)/ 800);
+}
+
+.git-icon, .link {
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition:  0.5s ease-out;
+    transition:  0.5s ease-out;
+}
+  
+ .link:hover{
+    color: #505066;
+    text-decoration: none;
+ }
+.git-icon:hover {
+    color: #F2A29C;
+    text-decoration: none;
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
 }
 
