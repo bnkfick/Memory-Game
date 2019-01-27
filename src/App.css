@@ -30,3 +30,20 @@
     letter-spacing: 2px;
     font-weight: 900;
 }
+
+@media (max-width: 700px) {
+  #showcase .content-wrap {
+    padding-top: 1.5em;
+  }
+}
+
+@media (max-width: 350px) {
+  #showcase,
+  #showcase .bg-image {
+    min-height: 350px;
+  }
+
+  .content-wrap > h1 {
+    font-size: 1.5rem;
+  }
+}

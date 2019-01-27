@@ -51,11 +51,9 @@ class App extends React.Component {
   };
 
   checkHighScore = (currentScore) => {
-    console.log(currentScore);
-    console.log(this.state.highScore);
     //-- Already incremented if correct answer, but not setState yet --//
     let newHiScore = Math.max(currentScore, this.state.highScore);
-console.log(newHiScore);
+
     if ( currentScore < this.state.highScore ) {
       return this.state.highScore;
     } else if (this.state.hightScore === 12)  {
@@ -71,12 +69,13 @@ console.log(newHiScore);
 
     updatedTiles.map(tile => {
       tile.clicked=false;
-    })
+    });
 
     this.setState({
       tiles: updatedTiles,
       score: 0
-    })
+    });
+    return true;
   };
 
 
