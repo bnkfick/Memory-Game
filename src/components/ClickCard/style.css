@@ -1,62 +1,19 @@
 
 
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+figure {
+  margin:0;
 }
 
-.grid-item > img {
-    height: 300px;
-    width: 300px;
+img {
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: -1px 1px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: -1px 1px 0px rgba(0, 0, 0, 0.06); 
+  border: 3px solid #eee;
+  transition: transform .4s; 
 }
 
-.card {
-  background: #fff;
-  border-radius: 2px;
-  height: 325px;
-  margin: 1rem;
-  position: relative;
-  width: 325px;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  text-align: left;
+img:hover {
+  transform: scale(1.1); 
 }
-
-.card > .img-container {
-  height: 60%;
-  overflow: hidden;
-  text-align: center;
-  background:#6CADDC;
-}
-.card > .img-container > img {
-  width: 60%
-}
-
-.card > .content {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 15px;
-}
-
-.card > .content > ul {
-  list-style-type: none;
-}
-
-.card > .content > ul > li {
-  margin-top: 18px;
-}
-
-.card > .remove {
-  color: #ff1744;
-  font-size: 48px;
-  position: absolute;
-  top: -20px;
-  right: 5px;
-  cursor: pointer;
-}
-
-.card > .remove:hover {
-  color: #d50000;
-}
+ 

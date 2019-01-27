@@ -1,6 +1,8 @@
 import React from "react";
 import ClickCard from "./components/ClickCard";
+import MsgBar from "./components/MsgBar";
 import Wrapper from "./components/Wrapper";
+import Footer from "./components/Footer";
 import tiles from "./tiles.json";
 import "./App.css";
 
@@ -13,6 +15,8 @@ class App extends React.Component {
 
 
   tileCardClick = clickedId => {
+
+    this.shuffle(this.state.tiles);
 
     const updatedTiles = tiles;
     let tileIdx = tiles.findIndex(tile => tile.id === clickedId);
@@ -28,20 +32,17 @@ class App extends React.Component {
         tiles: updatedTiles
       })
     }
+    
   };
 
   resetGame = () => {
     console.log("RESETTING GAME");
-    this.mixTiles(this.state.tiles);
+
     this.setState({
       score: 0
     })
   };
 
-  mixTiles = (tiles) => {
-    console.log("MIX TILES");
-    return this.shuffle(tiles);
-  }
 
   //================================================/
   // Mix up the images inside the array 
@@ -69,14 +70,15 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({
-      tiles: this.mixTiles(this.state.tiles)
+      tiles: this.shuffle(this.state.tiles)
     });
   }
 
   render() {
     return (
       <>
-      <h1 className="score">SCORE: {this.state.score}</h1>
+      <MsgBar score={this.state.score} msg={this.state.msg}></MsgBar>
+      
       <Wrapper>
           {
             this.state.tiles.map(tile => {
@@ -92,6 +94,7 @@ class App extends React.Component {
             })
           }
       </Wrapper>
+      <Footer></Footer>
       </>
     );
   }
