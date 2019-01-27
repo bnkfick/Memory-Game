@@ -15,22 +15,55 @@
     -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
     box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
     font-family: 'Nunito', sans-serif;
-    font-size: calc(10px + 10 * (100vw - 320px)/ 800);
+    /* font-size: calc(10px + 10 * (100vw - 320px)/ 800); */
     z-index: 99;
-    white-space: nowrap
+    justify-content: space-between; 
+    align-items: center;
 }
 
 .msgbar > div {
-    width: 33%;
+    display: flex;
 }
-.left {
+
+.box-1 {
+    font-size: 2em;
     text-align: left;
+
 }
-.center {
-    text-align: center;
-}
-.right {
+.box-2 {
+    font-size: 1.75em;
     text-align: right;
 }
+.box-3 {
+    font-size: 1.5em;
+    text-align: right;
+}
+.nested {
+    display: grid;
+    grid-gap:.1em;
+}
+/* .nested > div {
+    border: #333 1px dotted;
+} */
 
 
+@media (max-width: 1000px) {
+    .box-1 {
+        font-size: 2em;
+    }
+    .box-2 {
+        font-size: 1.75em;
+    }
+    .box-3 {
+        font-size: 1.2em;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .box-1,
+    .box-2,
+    .box-3 {
+        flex-basis: 100%;
+        text-align: left;
+    }
+  }
