@@ -20,7 +20,7 @@ class App extends React.Component {
 
     this.shuffle(this.state.tiles);
 
-    const updatedTiles = tiles;
+    const updatedTiles = [...tiles];
     let tileIdx = tiles.findIndex(tile => tile.id === clickedId);
 
     if (this.state.tiles[tileIdx].clicked === true) {
